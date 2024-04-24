@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post a Job</title>
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+<!-- SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+    }
+</style> -->
+</head>
+<body>
+
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <section class="flex">
+            <div id="menu-btn"  class="fa-solid fa-bars"></div>
+
+            <a href="index.html" class="logo"><i class="fas fa-briefcase"></i> JobHunt.</a>
+            
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="about.html">about us</a>
+                <a href="jobs.html">all jobs</a>
+                <a href="contact.html">contact us</a>
+                <a href="login.html">account</a>
+            </nav>
+
+            <a href="#" class="btn" style="margin-top: 0;">post job</a>
+
+
+        </section>
+    </header>
+    <!-- header section ends -->
+
+<div class="account-form-container">
+    <!-- <h2 class="mb-4">Post a Job</h2> -->
+    <section class="account-form">
+        <form id="postJobForm">
+            <h3>post a job</h3>
+            <br>
+                            <h1 style="text-align: left;">Job Title <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="job title" class="input">
+                            <h1 style="text-align: left;">Job Location <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="job location" class="input">
+                            <h1 style="text-align: left;">Job Type <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="job type" class="input">
+                            <h1 style="text-align: left;">Education Level <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="education level required" class="input">
+                            <h1 style="text-align: left;">Work Shifts <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="work shifts" class="input">
+                            <h1 style="text-align: left;">Estimated Salary <span style="color: red;">*</span></h1>
+                            <input type="text" required name="name" maxlength="20" placeholder="estimated salary (range)" class="input">
+                            <!-- <input type="email" required name="email" maxlength="50" placeholder="enter your email" class="input"> -->
+                            <!-- <input type="password" required name="pass" maxlength="20" placeholder="enter your password" class="input"> -->
+                            <!-- <input type="password" required name="c_pass" maxlength="20" placeholder="confirm your password" class="input"> -->
+                            <!-- <p>already have an account? <a href="login.html">login now</a></p> -->
+            <button type="submit" class="btn">Post Job</button>
+        </form>
+    </section>
+</div>
+
+<!-- footer section starts -->
+
+<footer class="footer">
+
+    <section class="grid">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i> home</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i> about</a>
+            <a href="jobs.html"><i class="fas fa-angle-right"></i> all jobs</a>
+            <a href="contact.html"><i class="fas fa-angle-right"></i> contact us</a>
+            <a href="#"><i class="fas fa-angle-right"></i> filter search</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"><i class="fas fa-angle-right"></i> account</a>
+            <a href="login.html"><i class="fas fa-angle-right"></i> login</a>
+            <a href="register.html"><i class="fas fa-angle-right"></i> register</a>
+            <a href="#"><i class="fas fa-angle-right"></i> post job</a>
+            <a href="#"><i class="fas fa-angle-right"></i> dashboard</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i> youtube</a>
+            
+        </div>
+
+    </section>
+
+    <div class="credit">&copy; copyright @ 2024 by <span>Mridul Nikhanj</span> | all right reserved!</div>
+
+
+</footer>
+
+
+
+
+
+<!-- footer section ends -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('postJobForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+        // Gather form data
+        // const jobTitle = document.getElementById('jobTitle').value;
+        // const jobDescription = document.getElementById('jobDescription').value;
+        // Display SweetAlert
+        Swal.fire({
+            title: 'YOUR JOB HAS BEEN POSTED!',
+            // text: 'Your job has been posted.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'index.html'; // Redirect to index.html
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
