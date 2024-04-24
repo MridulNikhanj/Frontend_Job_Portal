@@ -92,7 +92,7 @@
                 <a href="apply_now.html" class="btn">apply now</a>
 
                 <!-- <input type="submit" value="apply now" name="apply" class="btn"> -->
-                <button type="submit" class="save"><i class="far fa-heart"></i> <span>save job</span></button>
+                <!-- <button type="submit" id="changeColor" onclick="cc()" class="save"><i class="far fa-heart"></i> <span>save job</span></button> -->
             </form>
         </div>
     </section>
@@ -162,6 +162,28 @@
 
 
     <script src="js/script.js"></script>
+    <script>
+        function cc(){
+            var btn = document.getElementById("changeColor")
+            if(btn.classList.contains("far")){
+
+                btn.classList.add("fas")
+                btn.classList.remove("far")
+                document.getElementsByClassName("fa-heart").style.color = "red";
+            }else{
+                btn.classList.add("far")
+                btn.classList.remove("fas")
+                document.getElementsByClassName("fa-heart").style.color = "var(--light-color)";
+                
+            }
+
+        //     if (btn.classList.contains('far && fa-heart')) {
+        //     btn.style.color = 'red'; // Set color to red when filled heart icon is active
+        // } else {
+        //     btn.style.color = 'var(--light-color)'; // Set color to default when outline heart icon is active
+        // }
+        }
+    </script>
     
 </body>
 </html>
